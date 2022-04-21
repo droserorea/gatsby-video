@@ -2,13 +2,7 @@ const path = require("path");
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
-  // createPage({
-  //   path: "/using-dsg",
-  //   component: require.resolve("./src/templates/using-dsg.js"),
-  //   context: {},
-  //   defer: true,
-  // })
-  const  articles = await graphql(`
+  const articles = await graphql(`
     {
       allNodeArticle {
         nodes {
@@ -28,7 +22,7 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: articleData.path.alias,
       component: path.resolve(`./src/templates/article.js`),
-      context:{
+      context: {
         ArticleId: articleData.id,
       },
       defer: true,
