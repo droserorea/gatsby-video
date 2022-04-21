@@ -9,6 +9,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
+      resolve: `gatsby-source-drupal`,
+      options: {
+        // baseUrl: `https://spine-health9.vh.ddev.site`,
+        baseUrl: `https://hello-drupal9.lndo.site/`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
