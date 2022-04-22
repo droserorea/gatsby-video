@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import ArticlePreview from "../components/articlePreview";
+import Navbar from "../components/navbar";
 
 const Articles = ({ data }) => {
   const articles = data.allNodeArticle.nodes;
@@ -12,6 +13,7 @@ const Articles = ({ data }) => {
   return (
     <Layout>
       <SEO title="Articles" />
+      <Navbar/>
       <h1>Articles</h1>
       {articles.map(article => (
         <ArticlePreview

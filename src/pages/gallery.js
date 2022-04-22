@@ -5,10 +5,12 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Navbar from "../components/navbar";
 
 const Gallery = ({ data }) => (
     <Layout>
         <SEO title="Image gallery" />
+        <Navbar/>
         <h1>Image Gallery</h1>
         <Img fluid={data.astronautImage.childImageSharp.fluid} alt="astronaut"/>
         <Img fixed={data.gatsbyIcon.childImageSharp.fixed} alt="icon"/>

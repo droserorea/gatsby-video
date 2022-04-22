@@ -1,0 +1,21 @@
+.container {
+    margin: auto;
+    max-width: 800px;
+    font-family: sans-serif;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav-link-item {
+    padding-right: 3rem;
+}
+
+.nav-link-text {
+    color: black;
+}

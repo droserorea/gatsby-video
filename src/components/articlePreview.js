@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 const ArticlePreview = ({ title, path, image, alt, summary }) => (
     <div>
-        <Card sx={{ maxWidth: 800 }}>
+        <Card sx={{ maxWidth: 1000 }}>
             <CardMedia
                 component="img"
                 alt={alt}

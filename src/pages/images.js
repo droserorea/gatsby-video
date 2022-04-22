@@ -8,7 +8,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar'
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import ImagePreview from "../components/imagePreview";
+import Navbar from "../components/navbar";
 
 const Image = ({ data }) => {
   const articles = data.allNodeArticle.nodes;
@@ -16,6 +16,7 @@ const Image = ({ data }) => {
   return (
     <Layout>
       <SEO title="Images" />
+      <Navbar/>
       <h1>Images List Material UI</h1>
       <ImageList sx={{ width: 500, height: 450 }}>
         {articles.map(article => (
