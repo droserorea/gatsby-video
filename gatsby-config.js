@@ -1,3 +1,8 @@
+require("dotenv").config({
+  path: `.env.${process.env.ENABLE_GATSBY_REFRESH_ENDPOINT
+  }`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -7,10 +12,17 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    // {
+    //   resolve: `gatsby-source-drupal`,
+    //   options: {
+    //     baseUrl: `https://hello-drupal9.lndo.site/`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `https://hello-drupal9.lndo.site/`,
+        // baseUrl: `https://hello-drupal9.lndo.site/`,
+        baseUrl: `https://2191-157-100-171-22.sa.ngrok.io/`,
       },
     },
     `gatsby-plugin-image`,
@@ -32,6 +44,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
